@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "browser-sync-webpack-plugin": "^1.0.0",
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.10.0",
+    "dat-gui": "^0.5.0",
+    "ismobilejs": "^0.4.0",
+    "jquery": "^3.0.0",
+    "nib": "^1.1.0",
+    "pug": "^2.0.0-beta3",
+    "raw-loader": "^0.5.1",
+    "stats-js": "^1.0.0-alpha1",
+    "stylus": "^0.54.5",
+    "webpack": "^1.12.2"
+  },
+  "scripts": {
+    "start": "npm run jade & npm run css & npm run js:dev",
+    "dist": "npm run jade & npm run css & npm run js:dist",
+    "js:dev": "webpack -d --devtool inline-source-map --progress --colors --watch",
+    "js:dist": "webpack -p --progress --colors --watch",
+    "jade": "jade src/jade/index.jade -P -w -O src/jade/_json/data.json -o ../docs",
+    "css": "stylus -w src/stylus/ -o ../docs/assets/css/ -u nib"
+  }
+}

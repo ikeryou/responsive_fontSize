@@ -1,0 +1,68 @@
+@import 'nib'
+global-reset()
+
+@import '_inc/_mixin'
+
+body
+  width: 100%
+  height: 100%
+  text-size-adjust: 100%
+  font-family: 'Hiragino Kaku Gothic ProN', 'メイリオ', sans-serif
+  font-feature-settings: 'palt'
+  box-sizing: border-box
+  background-color: #F5F7FA
+  padding: 2vw
+  user-select:none
+
+.title
+  font-weight: bold
+  margin-bottom: 0.25em
+
+.text
+  color: #3C3B3D
+  line-height: 2
+  letter-spacing: 0.05em
+  word-break: break-all
+
+#slider
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 1.5%
+
+  & .bg
+    m_position()
+    m_size_full()
+    background-color: rgba(204,209,217,1)
+
+  & .bar
+    m_position()
+    height: 100%
+    background-color: #3BAFDA
+
+#debug
+  line-height: 1.75
+  letter-spacing: 0.05em
+  color:#FFF
+  background-color: #3BAFDA
+  font-size: 10px
+  position: fixed
+  bottom: 0px
+  right: 0px
+  padding: 3vw
+
+  & p
+    padding-left: 0.5em
+
+.important
+  font-weight: bold
+  text-decoration: underline
+
+.debug_desc
+  margin-bottom: 1em
+
+.is_selected
+  background-color: #FFF
+  color: #3BAFDA
+  font-weight: bold
